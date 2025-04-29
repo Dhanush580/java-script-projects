@@ -37,26 +37,31 @@
                     <h1 class="heading">Choose Your Option</h1>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center align-items-center">
-                <div class="opt-holder d-flex flex justify-content-center align-items-center">
-                    <div class="opt d-flex flex-column justify-content-center align-items-center p-3">
-                        <img src="fist-removebg-preview.png" class="img-fluid img">
-                        <button class="btn btn-danger" id="rock" onclick="rock()">Rock</button>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-4 col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="opt d-flex flex-column justify-content-center align-items-center p-1">
+                        <button class="btn hvr" id="rock" onclick="rock()"><img src="fist-removebg-preview.png" class="img-fluid img"></button>
+                        <P class="rule">ROCK</P>
                     </div>
-                    <div class="opt d-flex flex-column justify-content-center align-items-center p-3">
-                        <img src="paper-removebg-preview.png" class="img-fluid img">
-                        <button class="btn btn-danger" id="paper" onclick="paper()">Paper</button>
+                </div>
+                <div class="col-4 col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="opt d-flex flex-column justify-content-center align-items-center p-1">
+                        <button class="btn hvr" id="paper" onclick="paper()"><img src="paper-removebg-preview.png" class="img-fluid img"></button>
+                        <P class="rule">PAPER</P>
                     </div>
-                    <div class="opt d-flex flex-column justify-content-center align-items-center p-3">
-                        <img src="scissors-removebg-preview.png" class="img-fluid img">
-                        <button class="btn btn-danger" id="scissor" onclick="scissor()">Scissor</button>
+                </div>
+                <div class="col-4 col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="opt d-flex flex-column justify-content-center align-items-center p-1">
+                        <button class="btn hvr" id="scissor" onclick="scissor()"><img src="scissors-removebg-preview.png" class="img-fluid img"></button>
+                        <P class="rule">SCISSORS</P>
                     </div>
+
                 </div>
             </div>
         </div>   
-        <div class="col-12">
-            <p>Result:</p>
-            <p  id="result"></p>
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-3 p-3">
+            <p class="heading">Result:</p>
+            <p  id="result" class="rule"></p>
         </div> 
     </div>
     <script src="script.js"></script>
