@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid bg-dark text-danger p-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center welcome">
+                Welcome to The Rock Paper Scissors Game!
+            </div>
+            <div class="col-12 mt-3 d-flex justify-content-center align-items-center">
+                <div class="holder">
+                    <div class="rules d-flex flex-column justify-content-center align-items-center">
+                        <p class="heading">Game Rules:</p>
+                        <p class="rule">Choose one of the Rock, Scissors or papers</p>
+                        <p class="rule">Computer will also choose any one of them randomly</p>
+                    </div>
+                    <div class="rules d-flex flex-column justify-content-center align-items-center">
+                        <p class="heading">Result will be as:</p>
+                        <p class="rule">Rock crushes Scissors</p>
+                        <p class="rule">Scissors cuts Paper</p>
+                        <p class="rule">Paper covers Rock</p>
+                        <p class="rule">And if both choose the same, it will be a draw</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="heading-holder d-flex justify-content-center align-items-center">
+                    <h1 class="heading">Choose Your Option</h1>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <div class="opt-holder d-flex flex justify-content-center align-items-center">
+                    <div class="opt d-flex flex-column justify-content-center align-items-center p-3">
+                        <img src="fist-removebg-preview.png" class="img-fluid img">
+                        <button class="btn btn-danger" id="rock" onclick="rock()">Rock</button>
+                    </div>
+                    <div class="opt d-flex flex-column justify-content-center align-items-center p-3">
+                        <img src="paper-removebg-preview.png" class="img-fluid img">
+                        <button class="btn btn-danger" id="paper" onclick="paper()">Paper</button>
+                    </div>
+                    <div class="opt d-flex flex-column justify-content-center align-items-center p-3">
+                        <img src="scissors-removebg-preview.png" class="img-fluid img">
+                        <button class="btn btn-danger" id="scissor" onclick="scissor()">Scissor</button>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <div class="col-12">
+            <p>Result:</p>
+            <p  id="result"></p>
+        </div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
