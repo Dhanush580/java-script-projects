@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Counter</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #counter{
+            font-size: 10em;
+            margin: 20px;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .lund{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="counter">0</p>
+    <div class="lund">
+        <button id="inc" onclick="add()">+1</button>
+        <button id="dec" onclick="sub()">-1</button>
+    </div>
+    <script>
+        let stnum=document.getElementById("counter").textContent;
+        let ornum=parseInt(stnum);
+        function add(){
+            ornum+=1;
+            document.getElementById("counter").textContent=ornum;
+        }
+        function sub(){
+            ornum-=1;
+            document.getElementById("counter").textContent=ornum;
+        }   
+    </script>
+</body>
+</html>
