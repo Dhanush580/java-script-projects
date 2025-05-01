@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Game</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .heading{
+            font-size:100px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #guess{
+            margin-top: 50px;
+            width: 200px;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        #submit{
+            margin-top: 10px;
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 1px solid black;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px;
+        }
+        #submit:hover{
+            background-color: #208925;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Guess the number</h1>
+        <form>
+            <input type="text" id="guess" placeholder="Enter your guess" required>
+        </form>
+        <button id="submit" onclick="submit()">Submit</button>
+        <p id="message"></p>
+    </div>
+    <script>
+        const compgennum=Math.floor(Math.random()*100+1);
+        
+        let msg=document.getElementById("message")
+        function submit(){
+        let userguess=document.getElementById("guess").value;
+        ugnum=parseInt(userguess);
+        if(compgennum==ugnum){
+            msg.textContent="you guessed it right!";
+            msg.style.color="green";
+        }
+        else if(compgennum>ugnum){
+            msg.textContent="Your guess is too low!";
+            msg.style.color="red";
+        }
+        else if(compgennum<ugnum){
+            msg.textContent="Your guess is too high!";
+            msg.style.color="red";
+        }
+        else{
+            msg.textContent="Please enter a valid number!";
+            msg.style.color="red";
+        }
+    }
+    </script>
+</body>
+</html>
